@@ -1,9 +1,14 @@
-# api documentation for  [ember-modal-dialog (v1.0.0)](https://github.com/yapplabs/ember-modal-dialog#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ember-modal-dialog.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ember-modal-dialog) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ember-modal-dialog.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ember-modal-dialog)
+# npmdoc-ember-modal-dialog
+
+#### api documentation for  [ember-modal-dialog (v1.0.0)](https://github.com/yapplabs/ember-modal-dialog#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ember-modal-dialog.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ember-modal-dialog) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ember-modal-dialog.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ember-modal-dialog)
+
 #### An ember-cli addon for implementing modal dialogs
 
-[![NPM](https://nodei.co/npm/ember-modal-dialog.png?downloads=true)](https://www.npmjs.com/package/ember-modal-dialog)
+[![NPM](https://nodei.co/npm/ember-modal-dialog.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ember-modal-dialog)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-ember-modal-dialog_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ember-modal-dialog/build/screenCapture.npmPackageListing.svg)
 
@@ -79,21 +84,17 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "chrislopresto",
-            "email": "chris@chrislopresto.com"
+            "name": "chrislopresto"
         },
         {
-            "name": "lukemelia",
-            "email": "luke@lukemelia.com"
+            "name": "lukemelia"
         },
         {
-            "name": "samselikoff",
-            "email": "sam.selikoff@gmail.com"
+            "name": "samselikoff"
         }
     ],
     "name": "ember-modal-dialog",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yapplabs/ember-modal-dialog.git"
@@ -106,61 +107,6 @@
     },
     "version": "1.0.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module ember-modal-dialog](#apidoc.module.ember-modal-dialog)
-1.  [function <span class="apidocSignatureSpan">ember-modal-dialog.</span>init ()](#apidoc.element.ember-modal-dialog.init)
-1.  [function <span class="apidocSignatureSpan">ember-modal-dialog.</span>treeForAddonTemplates (tree)](#apidoc.element.ember-modal-dialog.treeForAddonTemplates)
-1.  string <span class="apidocSignatureSpan">ember-modal-dialog.</span>name
-
-
-
-# <a name="apidoc.module.ember-modal-dialog"></a>[module ember-modal-dialog](#apidoc.module.ember-modal-dialog)
-
-#### <a name="apidoc.element.ember-modal-dialog.init"></a>[function <span class="apidocSignatureSpan">ember-modal-dialog.</span>init ()](#apidoc.element.ember-modal-dialog.init)
-- description and source-code
-```javascript
-init = function () {
-  this._super.init && this._super.init.apply(this, arguments);
-  var checker = new VersionChecker(this);
-
-  if (!checker.forEmber().isAbove('0.2.6')) {
-    console.warn("Warning: ember-modal-dialog requires ember-cli >= 0.2.6 "
-      + "for support for the addon-templates tree, which allows "
-      + "us to support various ember versions. Use an older "
-      + "version of ember-modal-dialog if you are stuck on an "
-      + "older ember-cli.");
-  }
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.ember-modal-dialog.treeForAddonTemplates"></a>[function <span class="apidocSignatureSpan">ember-modal-dialog.</span>treeForAddonTemplates (tree)](#apidoc.element.ember-modal-dialog.treeForAddonTemplates)
-- description and source-code
-```javascript
-function treeForAddonTemplates(tree) {
-  var checker = new VersionChecker(this);
-  var emberVersion = checker.forEmber();
-
-  var baseTemplatesPath = path.join(this.root, 'addon/templates');
-
-  if (emberVersion.lt('1.13.0-beta.1')) {
-    return this.treeGenerator(path.join(baseTemplatesPath, 'lt-1-13'));
-  } else {
-    return this.treeGenerator(path.join(baseTemplatesPath, 'current'));
-  }
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
